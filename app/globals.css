@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  background-color: #fafaf8;
+  color: #3f3f3f;
+  line-height: 1.6;
+}
+
+/* Editorial Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+  line-height: 1.15;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 6vw, 4rem);
+  font-weight: 900;
+}
+
+h2 {
+  font-size: clamp(1.875rem, 4.5vw, 2.75rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2d2d2d;
+}
+
+p {
+  color: #4a4a48;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+}
+
+.btn-primary {
+  background-color: #2d2d2d;
+  color: white;
+  padding: 1rem 2rem;
+  border-color: #2d2d2d;
+}
+
+.btn-primary:hover {
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #2d2d2d;
+  border: 2px solid #2d2d2d;
+  padding: 0.875rem 1.875rem;
+}
+
+.btn-secondary:hover {
+  background-color: #2d2d2d;
+  color: white;
+}
+
+.btn-sm {
+  padding: 0.625rem 1.25rem;
+  font-size: 0.8rem;
+}
+
+/* Utility */
+.container-custom {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-spacing {
+  padding: 5rem 0;
+}
+
+.section-spacing-lg {
+  padding: 6rem 0;
+}
+
+/* Photo-forward styling */
+.photo-bg {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.overlay-dark {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .section-spacing {
+    padding: 3rem 0;
+  }
+
+  .section-spacing-lg {
+    padding: 3.5rem 0;
+  }
+
+  .photo-bg {
+    background-attachment: scroll;
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+  }
+}
